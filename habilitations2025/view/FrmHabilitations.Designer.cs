@@ -1,6 +1,6 @@
-﻿namespace habilitations2025
+﻿namespace Habilitations2025.view
 {
-    partial class Form1
+    partial class FrmHabilitations
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -34,7 +34,7 @@
             // lstValeurs
             // 
             this.lstValeurs.FormattingEnabled = true;
-            this.lstValeurs.Location = new System.Drawing.Point(281, 223);
+            this.lstValeurs.Location = new System.Drawing.Point(281, 215);
             this.lstValeurs.Name = "lstValeurs";
             this.lstValeurs.Size = new System.Drawing.Size(120, 95);
             this.lstValeurs.TabIndex = 0;

@@ -9,11 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace habilitations2025
+namespace Habilitations2025.view
 {
-    public partial class Form1 : Form
+    public partial class FrmHabilitations : Form
     {
-        public Form1()
+        public FrmHabilitations()
         {
             InitializeComponent();
         }
