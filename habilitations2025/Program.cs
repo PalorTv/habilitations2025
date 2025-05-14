@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Habilitations2025.view;
 
 namespace habilitations2025
 {
@@ -17,7 +16,7 @@ namespace habilitations2025
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmHabilitations());
+            Application.Run(new view.FrmHabilitations());
         }
     }
 }
