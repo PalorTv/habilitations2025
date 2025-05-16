@@ -159,5 +159,32 @@ namespace habilitations2025.dal
                 }
             }
         }
+
+        public Boolean ControleAuthentification(Admin admin)
+        {
+            if (access.Manager == null)
+            {
+                string req = "select d.iddeveloppeur as iddeveloppeur, d.nom as nom, d.prenom as prenom, p.idprofil as idprofil, p.nom as profil ";
+                req += "where d.nom=@nom, and d.prenom=@prenom and pwdSHA2(pwd, 256) and p.nom='admin';";
+                Dictionary<string, object> parameters = new Dictionary<string, object>();
+                parameters.Add("@nom", admin.Nom);
+                parameters.Add("@prenom", admin.Prenom);
+                parameters.Add("@tel", admin.Pwd);
+                try
+                {
+                    List<Object[]> records = access.Manager.ReqSelect(req, parameters);
+                    if (records != null)
+                    {
+                        return (records.Count > 0);
+                    }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    Environment.Exit(0);
+                }
+            }
+            return false;
+        }  
     }
 }

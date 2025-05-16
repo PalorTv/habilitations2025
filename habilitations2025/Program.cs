@@ -16,7 +16,7 @@ namespace habilitations2025
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new view.FrmHabilitations());
+            Application.Run(new view.FrmAuthentification());
         }
     }
 }
